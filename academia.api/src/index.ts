@@ -42,6 +42,10 @@ app.get('/courses/:id', (req, res) => {
   res.status(200).json(course);
 });
 
+app.get('/version', (req, res) => {
+  res.status(200).json({ version: '1.0.0' });
+});
+
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
